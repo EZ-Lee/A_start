@@ -93,11 +93,11 @@ module ShortestPath
   def get_min_f_point(open_set)
     return nil if open_set.empty?
 
-    min_g = open_set.values[0].g
+    min_g = open_set.values[0].f
     min_pos = open_set.values[0]
     open_set.values.each do |pos|
-      if min_g > pos.g
-        min_g = pos.g
+      if min_g > pos.f
+        min_g = pos.f
         min_pos = pos
       end
     end
